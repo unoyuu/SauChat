@@ -1,19 +1,19 @@
 //
-//  HomeViewController.swift
+//  MyPageViewController.swift
 //  SauChat
 //
-//  Created by 宇野佑 on 2020/12/14.
+//  Created by 宇野佑 on 2020/12/16.
 //
 
 import UIKit
 
-class HomeViewController: UIViewController {
-    @IBOutlet weak var tableView: UITableView!
+class MyPageViewController: UIViewController {
+    @IBOutlet weak var myPageView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.backgroundColor = UIColor.background
+        myPageView.backgroundColor = UIColor.background
 
         // Do any additional setup after loading the view.
     }

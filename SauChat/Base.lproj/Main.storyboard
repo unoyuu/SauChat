@@ -8,21 +8,35 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--My Page View Controller-->
         <scene sceneID="n5G-KF-aEx">
             <objects>
-                <viewController id="OVF-M4-Bsz" sceneMemberID="viewController">
+                <viewController id="OVF-M4-Bsz" customClass="MyPageViewController" customModule="SauChat" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1rl-fV-VOO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nec-RN-q7g">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Ofl-g9-bIZ"/>
-                        <color key="backgroundColor" systemColor="systemTealColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="nec-RN-q7g" firstAttribute="leading" secondItem="Ofl-g9-bIZ" secondAttribute="leading" id="GBt-So-tJM"/>
+                            <constraint firstItem="nec-RN-q7g" firstAttribute="top" secondItem="Ofl-g9-bIZ" secondAttribute="top" id="LUh-Xj-gtC"/>
+                            <constraint firstItem="nec-RN-q7g" firstAttribute="trailing" secondItem="Ofl-g9-bIZ" secondAttribute="trailing" id="UxJ-Sw-kWg"/>
+                            <constraint firstItem="nec-RN-q7g" firstAttribute="bottom" secondItem="Ofl-g9-bIZ" secondAttribute="bottom" id="pYS-lk-6iV"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="wae-V8-c6i"/>
+                    <connections>
+                        <outlet property="myPageView" destination="nec-RN-q7g" id="cIH-14-gLJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qry-Sr-YdN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1288" y="-17"/>
+            <point key="canvasLocation" x="1286.9565217391305" y="-17.410714285714285"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="Oo8-dt-O4I">
@@ -57,6 +71,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="PLn-YC-c33"/>
+                    <connections>
+                        <outlet property="tableView" destination="0eY-Zf-uqa" id="cWK-AB-fEs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pbU-Gj-qIg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -122,9 +139,6 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemTealColor">
-            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
