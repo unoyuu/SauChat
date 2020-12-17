@@ -68,7 +68,7 @@
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="wzp-h6-VuU"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="0eY-Zf-uqa" firstAttribute="leading" secondItem="wzp-h6-VuU" secondAttribute="leading" id="HdU-9X-1Qc"/>
                             <constraint firstItem="0eY-Zf-uqa" firstAttribute="top" secondItem="wzp-h6-VuU" secondAttribute="top" id="YGO-0g-WLb"/>
