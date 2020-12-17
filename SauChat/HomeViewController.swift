@@ -10,23 +10,64 @@ import UIKit
 class HomeViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
+    var messages:[String] = ["テスト"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tableView.backgroundColor = UIColor.background
+        
+        let footerView = UIView(frame: .zero)
+        footerView.backgroundColor = .gray
+        tableView.tableFooterView = footerView
 
         // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        
+        if messages.count == 0{
+            noChatAlert()
+        }
+        
     }
-    */
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "pushChatViewController"{
+            let chatViewController = segue.destination as! ChatViewController
+            chatViewController.parameter = sender as! [String]
+        }
+    }
+    
+    
+    func noChatAlert(){
+        
+        let alertController = UIAlertController(title: "まだチャットはありません", message: "チャットを作成しましょう", preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        alertController.alertBackGroundColor()
+        
+        present(alertController, animated: true, completion: nil)
+    }
 
+}
+
+extension HomeViewController:UITableViewDelegate,UITableViewDataSource{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return messages.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell(style: .default, reuseIdentifier: "HomeTableViewCell")
+        cell.textLabel?.text = "テスト"
+        cell.textLabel?.textAlignment = .center
+        return cell
+    }
+    
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.performSegue(withIdentifier: "pushChatViewController", sender: messages)
+    }
+    
+    
 }

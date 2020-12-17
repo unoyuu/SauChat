@@ -48,7 +48,6 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0eY-Zf-uqa">
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="86" id="aGp-eA-grk">
                                         <rect key="frame" x="0.0" y="28" width="414" height="86"/>
@@ -57,8 +56,15 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="86"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="zVf-pk-bML" kind="show" identifier="pushChatViewController" trigger="accessoryAction" id="LgA-q9-8Jr"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="sFr-RG-pPg" id="v7j-GC-d1J"/>
+                                    <outlet property="delegate" destination="sFr-RG-pPg" id="ccn-cu-Idd"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="wzp-h6-VuU"/>
@@ -78,6 +84,51 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pbU-Gj-qIg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1288.4057971014495" y="-823.66071428571422"/>
+        </scene>
+        <!--Chat View Controller-->
+        <scene sceneID="v2n-3C-t2c">
+            <objects>
+                <viewController id="zVf-pk-bML" customClass="ChatViewController" customModule="SauChat" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="meB-ku-Hhc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="x8z-Oo-rJN">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="98" id="OBo-yE-BIl">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="98"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="OBo-yE-BIl" id="uvo-OM-pK0">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="98"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="zVf-pk-bML" id="rIA-Zx-m2f"/>
+                                    <outlet property="delegate" destination="zVf-pk-bML" id="D4a-cM-uN0"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="tDO-gH-0AQ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="x8z-Oo-rJN" firstAttribute="top" secondItem="tDO-gH-0AQ" secondAttribute="top" id="MV4-4u-qO2"/>
+                            <constraint firstItem="x8z-Oo-rJN" firstAttribute="bottom" secondItem="tDO-gH-0AQ" secondAttribute="bottom" id="Tm2-Kr-Ll9"/>
+                            <constraint firstItem="x8z-Oo-rJN" firstAttribute="leading" secondItem="tDO-gH-0AQ" secondAttribute="leading" id="foD-jC-5cL"/>
+                            <constraint firstItem="x8z-Oo-rJN" firstAttribute="trailing" secondItem="tDO-gH-0AQ" secondAttribute="trailing" id="ftK-uf-Ej5"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="2lw-pu-fXT"/>
+                    <connections>
+                        <outlet property="chatTableView" destination="x8z-Oo-rJN" id="6LR-yX-VvV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vNQ-Bc-6hO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2334.7826086956525" y="-824.33035714285711"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="sSM-ef-RDV">

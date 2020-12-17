@@ -29,4 +29,9 @@ extension UIColor{
             dark: .blue
         )
     }
+    
+    
+    public static var alertBackGround:UIColor{
+        return dynamicColor(light: .white, dark: .darkGray)
+    }
 }

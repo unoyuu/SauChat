@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		E8ACA3A22589F7960080A5DF /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8ACA3A12589F7960080A5DF /* UIColorExtension.swift */; };
 		E8ACA3AA2589FDBD0080A5DF /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8ACA3A92589FDBD0080A5DF /* MyPageViewController.swift */; };
+		E8ACA3B9258AE0E20080A5DF /* UIAlertExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8ACA3B8258AE0E10080A5DF /* UIAlertExtension.swift */; };
+		E8ACA3BE258B055D0080A5DF /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8ACA3BD258B055D0080A5DF /* ChatViewController.swift */; };
 		E8C336202554E64B009CC977 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C3361F2554E64B009CC977 /* AppDelegate.swift */; };
 		E8C336222554E64B009CC977 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C336212554E64B009CC977 /* SceneDelegate.swift */; };
 		E8C336272554E64B009CC977 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8C336252554E64B009CC977 /* Main.storyboard */; };
@@ -39,6 +41,8 @@
 /* Begin PBXFileReference section */
 		E8ACA3A12589F7960080A5DF /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		E8ACA3A92589FDBD0080A5DF /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
+		E8ACA3B8258AE0E10080A5DF /* UIAlertExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAlertExtension.swift; sourceTree = "<group>"; };
+		E8ACA3BD258B055D0080A5DF /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		E8C3361C2554E64B009CC977 /* SauChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SauChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8C3361F2554E64B009CC977 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E8C336212554E64B009CC977 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -84,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				E8ACA3A12589F7960080A5DF /* UIColorExtension.swift */,
+				E8ACA3B8258AE0E10080A5DF /* UIAlertExtension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -119,6 +124,7 @@
 				E8C3362D2554E651009CC977 /* Info.plist */,
 				E8CE511A2586FB2D006E4BE0 /* HomeViewController.swift */,
 				E8ACA3A92589FDBD0080A5DF /* MyPageViewController.swift */,
+				E8ACA3BD258B055D0080A5DF /* ChatViewController.swift */,
 				E8ACA3B12589FEC90080A5DF /* Extension */,
 			);
 			path = SauChat;
@@ -275,7 +281,9 @@
 				E8ACA3AA2589FDBD0080A5DF /* MyPageViewController.swift in Sources */,
 				E8C336202554E64B009CC977 /* AppDelegate.swift in Sources */,
 				E8C336222554E64B009CC977 /* SceneDelegate.swift in Sources */,
+				E8ACA3BE258B055D0080A5DF /* ChatViewController.swift in Sources */,
 				E8CE511B2586FB2D006E4BE0 /* HomeViewController.swift in Sources */,
+				E8ACA3B9258AE0E20080A5DF /* UIAlertExtension.swift in Sources */,
 				E8ACA3A22589F7960080A5DF /* UIColorExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
