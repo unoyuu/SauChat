@@ -20,6 +20,12 @@ class ChatViewController: UIViewController {
         chatTableView.tableFooterView = UIView(frame: .zero)
 
     }
+    
+    
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        
+    }
 
 }
 

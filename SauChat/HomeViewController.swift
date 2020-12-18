@@ -10,11 +10,12 @@ import UIKit
 class HomeViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
-    var messages:[String] = ["テスト"]
+    var messages:[String] = ["好きなサウナを語ろう"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        tableView.register(UINib(nibName: "HomeCell", bundle: nil), forCellReuseIdentifier: "HomeCell")
         tableView.backgroundColor = UIColor.background
         
         let footerView = UIView(frame: .zero)
@@ -58,15 +59,18 @@ extension HomeViewController:UITableViewDelegate,UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: .default, reuseIdentifier: "HomeTableViewCell")
-        cell.textLabel?.text = "テスト"
-        cell.textLabel?.textAlignment = .center
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "HomeCell", for: indexPath) as! HomeCell
+        cell.setCell(userName: "ジョニオ", title: messages[0])
         return cell
+        
     }
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.performSegue(withIdentifier: "pushChatViewController", sender: messages)
+        let chatVC = self.storyboard?.instantiateViewController(identifier: "ChatVC") as! ChatViewController
+        chatVC.parameter = messages
+        self.navigationController?.pushViewController(ChatViewController(), animated: true)
     }
     
     

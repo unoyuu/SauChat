@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E80098C4258C75D300214673 /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80098C2258C75D300214673 /* HomeCell.swift */; };
+		E80098C5258C75D300214673 /* HomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E80098C3258C75D300214673 /* HomeCell.xib */; };
 		E8ACA3A22589F7960080A5DF /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8ACA3A12589F7960080A5DF /* UIColorExtension.swift */; };
 		E8ACA3AA2589FDBD0080A5DF /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8ACA3A92589FDBD0080A5DF /* MyPageViewController.swift */; };
 		E8ACA3B9258AE0E20080A5DF /* UIAlertExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8ACA3B8258AE0E10080A5DF /* UIAlertExtension.swift */; };
@@ -39,6 +41,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E80098C2258C75D300214673 /* HomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCell.swift; sourceTree = "<group>"; };
+		E80098C3258C75D300214673 /* HomeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeCell.xib; sourceTree = "<group>"; };
 		E8ACA3A12589F7960080A5DF /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		E8ACA3A92589FDBD0080A5DF /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
 		E8ACA3B8258AE0E10080A5DF /* UIAlertExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAlertExtension.swift; sourceTree = "<group>"; };
@@ -126,6 +130,8 @@
 				E8ACA3A92589FDBD0080A5DF /* MyPageViewController.swift */,
 				E8ACA3BD258B055D0080A5DF /* ChatViewController.swift */,
 				E8ACA3B12589FEC90080A5DF /* Extension */,
+				E80098C2258C75D300214673 /* HomeCell.swift */,
+				E80098C3258C75D300214673 /* HomeCell.xib */,
 			);
 			path = SauChat;
 			sourceTree = "<group>";
@@ -253,6 +259,7 @@
 			files = (
 				E8C3362C2554E651009CC977 /* LaunchScreen.storyboard in Resources */,
 				E8C336292554E651009CC977 /* Assets.xcassets in Resources */,
+				E80098C5258C75D300214673 /* HomeCell.xib in Resources */,
 				E8C336272554E64B009CC977 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -280,6 +287,7 @@
 			files = (
 				E8ACA3AA2589FDBD0080A5DF /* MyPageViewController.swift in Sources */,
 				E8C336202554E64B009CC977 /* AppDelegate.swift in Sources */,
+				E80098C4258C75D300214673 /* HomeCell.swift in Sources */,
 				E8C336222554E64B009CC977 /* SceneDelegate.swift in Sources */,
 				E8ACA3BE258B055D0080A5DF /* ChatViewController.swift in Sources */,
 				E8CE511B2586FB2D006E4BE0 /* HomeViewController.swift in Sources */,
