@@ -75,28 +75,32 @@
         <!--Chat View Controller-->
         <scene sceneID="v2n-3C-t2c">
             <objects>
-                <viewController storyboardIdentifier="ChatVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="zVf-pk-bML" customClass="ChatViewController" customModule="SauChat" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ChatVC" id="zVf-pk-bML" customClass="ChatViewController" customModule="SauChat" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="meB-ku-Hhc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lgX-Ch-S8A">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="LK3-Ym-sfh">
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="zVf-pk-bML" id="hHL-Mt-EU5"/>
+                                    <outlet property="delegate" destination="zVf-pk-bML" id="6bX-an-M8v"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="tDO-gH-0AQ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="lgX-Ch-S8A" firstAttribute="trailing" secondItem="tDO-gH-0AQ" secondAttribute="trailing" id="5jt-9X-Z3c"/>
-                            <constraint firstItem="lgX-Ch-S8A" firstAttribute="top" secondItem="tDO-gH-0AQ" secondAttribute="top" id="mty-fC-z54"/>
-                            <constraint firstItem="lgX-Ch-S8A" firstAttribute="leading" secondItem="tDO-gH-0AQ" secondAttribute="leading" id="rHo-qD-R9m"/>
-                            <constraint firstItem="tDO-gH-0AQ" firstAttribute="bottom" secondItem="lgX-Ch-S8A" secondAttribute="bottom" id="va4-4a-TK1"/>
+                            <constraint firstItem="tDO-gH-0AQ" firstAttribute="trailing" secondItem="LK3-Ym-sfh" secondAttribute="trailing" id="OnD-hA-PVt"/>
+                            <constraint firstItem="tDO-gH-0AQ" firstAttribute="bottom" secondItem="LK3-Ym-sfh" secondAttribute="bottom" id="PGI-hc-yVc"/>
+                            <constraint firstItem="LK3-Ym-sfh" firstAttribute="top" secondItem="tDO-gH-0AQ" secondAttribute="top" id="VXJ-u9-68T"/>
+                            <constraint firstItem="LK3-Ym-sfh" firstAttribute="leading" secondItem="tDO-gH-0AQ" secondAttribute="leading" id="diJ-5H-39F"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="2lw-pu-fXT"/>
                     <connections>
-                        <outlet property="chatTableView" destination="lgX-Ch-S8A" id="hnx-ay-cEz"/>
+                        <outlet property="chatTableView" destination="LK3-Ym-sfh" id="L8E-xa-DUg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vNQ-Bc-6hO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

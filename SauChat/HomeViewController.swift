@@ -34,14 +34,6 @@ class HomeViewController: UIViewController {
         
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "pushChatViewController"{
-            let chatViewController = segue.destination as! ChatViewController
-            chatViewController.parameter = sender as! [String]
-        }
-    }
-    
-    
     func noChatAlert(){
         
         let alertController = UIAlertController(title: "まだチャットはありません", message: "チャットを作成しましょう", preferredStyle: .alert)
@@ -70,7 +62,7 @@ extension HomeViewController:UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let chatVC = self.storyboard?.instantiateViewController(identifier: "ChatVC") as! ChatViewController
         chatVC.parameter = messages
-        self.navigationController?.pushViewController(ChatViewController(), animated: true)
+        self.navigationController?.pushViewController(chatVC, animated: true)
     }
     
     

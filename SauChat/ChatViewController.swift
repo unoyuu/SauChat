@@ -16,6 +16,7 @@ class ChatViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        chatTableView.register(UINib(nibName: "HomeCell", bundle: nil), forCellReuseIdentifier: "HomeCell")
         chatTableView.backgroundColor = UIColor.background
         chatTableView.tableFooterView = UIView(frame: .zero)
 
@@ -35,11 +36,10 @@ extension ChatViewController:UITableViewDelegate,UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: .default, reuseIdentifier: "chatCell")
-        cell.textLabel?.text = parameter[0]
-        cell.textLabel?.textAlignment = .center
-        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "HomeCell", for: indexPath) as! HomeCell
+        cell.setCell(userName: "ジョニオ", title: parameter[0])
         return cell
+        
     }
     
     
