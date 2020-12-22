@@ -80,27 +80,45 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="LK3-Ym-sfh">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="raw-mD-QiF">
+                                <rect key="frame" x="0.0" y="44" width="414" height="697"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <connections>
-                                    <outlet property="dataSource" destination="zVf-pk-bML" id="hHL-Mt-EU5"/>
-                                    <outlet property="delegate" destination="zVf-pk-bML" id="6bX-an-M8v"/>
+                                    <outlet property="dataSource" destination="zVf-pk-bML" id="yHB-OV-HxC"/>
+                                    <outlet property="delegate" destination="zVf-pk-bML" id="bOQ-z0-HVu"/>
                                 </connections>
                             </tableView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="usS-lL-24I">
+                                <rect key="frame" x="20" y="782" width="290" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sJK-KQ-CgS">
+                                <rect key="frame" x="318" y="782" width="90" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="決定"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="tDO-gH-0AQ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="tDO-gH-0AQ" firstAttribute="trailing" secondItem="LK3-Ym-sfh" secondAttribute="trailing" id="OnD-hA-PVt"/>
-                            <constraint firstItem="tDO-gH-0AQ" firstAttribute="bottom" secondItem="LK3-Ym-sfh" secondAttribute="bottom" id="PGI-hc-yVc"/>
-                            <constraint firstItem="LK3-Ym-sfh" firstAttribute="top" secondItem="tDO-gH-0AQ" secondAttribute="top" id="VXJ-u9-68T"/>
-                            <constraint firstItem="LK3-Ym-sfh" firstAttribute="leading" secondItem="tDO-gH-0AQ" secondAttribute="leading" id="diJ-5H-39F"/>
+                            <constraint firstItem="usS-lL-24I" firstAttribute="leading" secondItem="tDO-gH-0AQ" secondAttribute="leading" constant="20" id="651-kw-ujA"/>
+                            <constraint firstItem="raw-mD-QiF" firstAttribute="top" secondItem="tDO-gH-0AQ" secondAttribute="top" id="6xO-no-wmA"/>
+                            <constraint firstItem="sJK-KQ-CgS" firstAttribute="leading" secondItem="usS-lL-24I" secondAttribute="trailing" constant="8" symbolic="YES" id="DLh-aS-fwZ"/>
+                            <constraint firstItem="usS-lL-24I" firstAttribute="top" secondItem="raw-mD-QiF" secondAttribute="bottom" constant="41" id="FUB-bE-d6P"/>
+                            <constraint firstItem="usS-lL-24I" firstAttribute="width" secondItem="meB-ku-Hhc" secondAttribute="width" multiplier="0.7" id="K2s-uL-nmG"/>
+                            <constraint firstItem="tDO-gH-0AQ" firstAttribute="bottom" secondItem="sJK-KQ-CgS" secondAttribute="bottom" constant="46" id="Mea-Xs-D9w"/>
+                            <constraint firstItem="sJK-KQ-CgS" firstAttribute="top" secondItem="raw-mD-QiF" secondAttribute="bottom" constant="41" id="O0U-KW-G5R"/>
+                            <constraint firstItem="raw-mD-QiF" firstAttribute="leading" secondItem="tDO-gH-0AQ" secondAttribute="leading" id="ShZ-Ud-j36"/>
+                            <constraint firstItem="tDO-gH-0AQ" firstAttribute="bottom" secondItem="raw-mD-QiF" secondAttribute="bottom" constant="121" id="Vjn-1a-vGD"/>
+                            <constraint firstItem="tDO-gH-0AQ" firstAttribute="trailing" secondItem="sJK-KQ-CgS" secondAttribute="trailing" constant="6" id="oBV-wx-QkJ"/>
+                            <constraint firstItem="tDO-gH-0AQ" firstAttribute="bottom" secondItem="usS-lL-24I" secondAttribute="bottom" constant="46" id="pW2-As-g2u"/>
+                            <constraint firstItem="raw-mD-QiF" firstAttribute="trailing" secondItem="tDO-gH-0AQ" secondAttribute="trailing" id="shO-SA-Sxr"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="2lw-pu-fXT"/>
                     <connections>
-                        <outlet property="chatTableView" destination="LK3-Ym-sfh" id="L8E-xa-DUg"/>
+                        <outlet property="chatTableView" destination="raw-mD-QiF" id="Sg4-Iu-AdM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vNQ-Bc-6hO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
