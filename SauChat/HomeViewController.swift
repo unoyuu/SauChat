@@ -21,6 +21,8 @@ class HomeViewController: UIViewController {
         let footerView = UIView(frame: .zero)
         footerView.backgroundColor = .gray
         tableView.tableFooterView = footerView
+        
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
 
         // Do any additional setup after loading the view.
     }

@@ -96,7 +96,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sJK-KQ-CgS">
                                 <rect key="frame" x="318" y="782" width="90" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <state key="normal" title="決定"/>
+                                <state key="normal" title="送信"/>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="tDO-gH-0AQ"/>
