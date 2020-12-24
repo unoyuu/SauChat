@@ -15,6 +15,7 @@ class ChatTitleCell: UITableViewCell {
     
     @IBOutlet weak var chatTitle: UILabel!
     
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -29,8 +30,8 @@ class ChatTitleCell: UITableViewCell {
     
     func setCell(userName:String,chatTitle:String){
         
-//        self.userName.text = userName
-//        self.chatTitle.text = chatTitle
+        self.userName.text = userName
+        self.chatTitle.text = chatTitle
     }
     
 }

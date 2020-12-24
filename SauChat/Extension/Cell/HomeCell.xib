@@ -23,12 +23,6 @@
                             <constraint firstAttribute="width" constant="101" id="jM5-jj-DdQ"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hAA-Bw-sTi">
-                        <rect key="frame" x="30" y="104" width="538" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Qe-iH-5dT">
                         <rect key="frame" x="126" y="13" width="487" height="62"/>
                         <constraints>
@@ -38,22 +32,28 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y2K-0l-6u6">
+                        <rect key="frame" x="50" y="83" width="498" height="69"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="hAA-Bw-sTi" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="10" id="4Gh-5x-EhQ"/>
+                    <constraint firstItem="y2K-0l-6u6" firstAttribute="top" secondItem="iwg-Yt-UFB" secondAttribute="bottom" constant="8" symbolic="YES" id="2fb-Fz-NQZ"/>
                     <constraint firstItem="iwg-Yt-UFB" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="54o-gF-SdW"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="y2K-0l-6u6" secondAttribute="trailing" constant="30" id="C16-kE-26Q"/>
                     <constraint firstItem="iwg-Yt-UFB" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="13" id="EwX-sA-lhA"/>
+                    <constraint firstItem="y2K-0l-6u6" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="30" id="SC6-gS-gtz"/>
                     <constraint firstItem="0Qe-iH-5dT" firstAttribute="leading" secondItem="iwg-Yt-UFB" secondAttribute="trailing" constant="15" id="b5p-sW-Ia4"/>
                     <constraint firstItem="0Qe-iH-5dT" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="13" id="f7P-6y-viH"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="hAA-Bw-sTi" secondAttribute="bottom" constant="33" id="gE4-G4-ojz"/>
-                    <constraint firstItem="hAA-Bw-sTi" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" constant="-10" id="rkg-7k-fyG"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="y2K-0l-6u6" secondAttribute="bottom" constant="6" id="jKX-FA-bYN"/>
                     <constraint firstAttribute="trailing" secondItem="0Qe-iH-5dT" secondAttribute="trailing" constant="-15" id="sXz-lc-ugc"/>
-                    <constraint firstItem="hAA-Bw-sTi" firstAttribute="top" secondItem="iwg-Yt-UFB" secondAttribute="bottom" constant="29" id="tGj-ZN-0gZ"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="title" destination="hAA-Bw-sTi" id="HOf-2V-ye6"/>
+                <outlet property="title" destination="y2K-0l-6u6" id="rIh-wj-0k5"/>
                 <outlet property="userIcon" destination="iwg-Yt-UFB" id="93h-gs-yKR"/>
                 <outlet property="userName" destination="0Qe-iH-5dT" id="eQe-Py-dc7"/>
             </connections>

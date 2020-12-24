@@ -16,9 +16,10 @@ class ChatViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        chatTableView.register(UINib(nibName: "HomeCell", bundle: nil), forCellReuseIdentifier: "HomeCell")
+        chatTableView.register(UINib(nibName: "ChatTitleCell", bundle: nil), forCellReuseIdentifier: "ChatTitleCell")
         chatTableView.backgroundColor = UIColor.background
         chatTableView.tableFooterView = UIView(frame: .zero)
+//        chatTableView.estimatedRowHeight = 200
 
     }
     
@@ -36,11 +37,15 @@ extension ChatViewController:UITableViewDelegate,UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "HomeCell", for: indexPath) as! HomeCell
-        cell.setCell(userName: "ジョニオ", title: parameter[0])
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ChatTitleCell", for: indexPath) as! ChatTitleCell
+        cell.setCell(userName: "ジョニオ", chatTitle: parameter[0])
         return cell
         
     }
+    
+//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        return UITableView.automaticDimension
+//    }
     
     
 }
